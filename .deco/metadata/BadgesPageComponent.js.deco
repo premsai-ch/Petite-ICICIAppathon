@@ -1,0 +1,122 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 21,
+					"ch": 24
+				},
+				"to": {
+					"line": 21,
+					"ch": 33
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 28,
+					"ch": 30
+				},
+				"to": {
+					"line": 28,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 38,
+					"ch": 30
+				},
+				"to": {
+					"line": 38,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 45,
+					"ch": 30
+				},
+				"to": {
+					"line": 45,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 52,
+					"ch": 32
+				},
+				"to": {
+					"line": 52,
+					"ch": 41
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 68,
+					"ch": 32
+				},
+				"to": {
+					"line": 68,
+					"ch": 41
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 103,
+					"ch": 14
+				},
+				"to": {
+					"line": 103,
+					"ch": 24
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignSelf",
+			"type": "string",
+			"name": "AlignSelf"
+		}
+	]
+}

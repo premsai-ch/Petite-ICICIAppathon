@@ -1,0 +1,246 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 43,
+					"ch": 24
+				},
+				"to": {
+					"line": 43,
+					"ch": 33
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 49,
+					"ch": 24
+				},
+				"to": {
+					"line": 49,
+					"ch": 33
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 56,
+					"ch": 25
+				},
+				"to": {
+					"line": 56,
+					"ch": 27
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 57,
+					"ch": 25
+				},
+				"to": {
+					"line": 57,
+					"ch": 44
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 60,
+					"ch": 24
+				},
+				"to": {
+					"line": 60,
+					"ch": 31
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 77,
+					"ch": 25
+				},
+				"to": {
+					"line": 77,
+					"ch": 27
+				}
+			},
+			"type": "number",
+			"name": "ActiveOpacity",
+			"min": 0,
+			"max": 100,
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 78,
+					"ch": 25
+				},
+				"to": {
+					"line": 78,
+					"ch": 44
+				}
+			},
+			"editWith": "colorPicker",
+			"type": "string",
+			"name": "UnderlayColor",
+			"group": "TOUCHABLE HIGHLIGHT"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 81,
+					"ch": 26
+				},
+				"to": {
+					"line": 81,
+					"ch": 35
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 126,
+					"ch": 16
+				},
+				"to": {
+					"line": 126,
+					"ch": 25
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 145,
+					"ch": 16
+				},
+				"to": {
+					"line": 145,
+					"ch": 18
+				}
+			},
+			"type": "number",
+			"name": "MarginLeft"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 147,
+					"ch": 20
+				},
+				"to": {
+					"line": 147,
+					"ch": 34
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 148,
+					"ch": 16
+				},
+				"to": {
+					"line": 148,
+					"ch": 26
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 158,
+					"ch": 16
+				},
+				"to": {
+					"line": 158,
+					"ch": 18
+				}
+			},
+			"type": "number",
+			"name": "MarginLeft"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 160,
+					"ch": 20
+				},
+				"to": {
+					"line": 160,
+					"ch": 34
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 161,
+					"ch": 16
+				},
+				"to": {
+					"line": 161,
+					"ch": 26
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems"
+		}
+	]
+}

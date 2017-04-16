@@ -1,0 +1,173 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 21,
+					"ch": 24
+				},
+				"to": {
+					"line": 21,
+					"ch": 33
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 28,
+					"ch": 30
+				},
+				"to": {
+					"line": 28,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 39,
+					"ch": 30
+				},
+				"to": {
+					"line": 39,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 46,
+					"ch": 30
+				},
+				"to": {
+					"line": 46,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 58,
+					"ch": 30
+				},
+				"to": {
+					"line": 58,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 69,
+					"ch": 30
+				},
+				"to": {
+					"line": 69,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 81,
+					"ch": 30
+				},
+				"to": {
+					"line": 81,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 94,
+					"ch": 30
+				},
+				"to": {
+					"line": 94,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 100,
+					"ch": 30
+				},
+				"to": {
+					"line": 100,
+					"ch": 39
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 132,
+					"ch": 19
+				},
+				"to": {
+					"line": 132,
+					"ch": 29
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent"
+		}
+	]
+}

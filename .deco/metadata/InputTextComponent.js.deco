@@ -1,0 +1,137 @@
+{
+	"liveValues": [
+		{
+			"range": {
+				"from": {
+					"line": 24,
+					"ch": 26
+				},
+				"to": {
+					"line": 24,
+					"ch": 35
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 31,
+					"ch": 32
+				},
+				"to": {
+					"line": 31,
+					"ch": 46
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "JustifyContent",
+			"type": "string",
+			"name": "JustifyContent"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 32,
+					"ch": 30
+				},
+				"to": {
+					"line": 32,
+					"ch": 40
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "AlignItems",
+			"type": "string",
+			"name": "AlignItems"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 40,
+					"ch": 28
+				},
+				"to": {
+					"line": 40,
+					"ch": 37
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 50,
+					"ch": 28
+				},
+				"to": {
+					"line": 50,
+					"ch": 37
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 77,
+					"ch": 28
+				},
+				"to": {
+					"line": 77,
+					"ch": 37
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 87,
+					"ch": 28
+				},
+				"to": {
+					"line": 87,
+					"ch": 37
+				}
+			},
+			"editWith": "dropdown",
+			"dropdownOptions": "ResizeMode",
+			"type": "string",
+			"name": "ResizeMode",
+			"group": "IMAGE"
+		},
+		{
+			"range": {
+				"from": {
+					"line": 108,
+					"ch": 12
+				},
+				"to": {
+					"line": 108,
+					"ch": 14
+				}
+			},
+			"type": "number",
+			"name": "Height",
+			"max": 600,
+			"group": "IMAGE"
+		}
+	]
+}

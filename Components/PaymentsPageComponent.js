@@ -20,14 +20,14 @@ class PaymentsPageComponent extends Component {
           <Image 
             style={PaymentsPageStyles.topbarImage}
             resizeMode={"stretch"}
-              source={require("./img/PaymentsPage/hdpi/PaymentsTopBar.png")}
+              source={require("../img/PaymentsPage/hdpi/PaymentsTopBar.png")}
               key={"abcdeefg"}
           >
           <View style={PaymentsPageStyles.backArrowView}>
               <Image 
             style={PaymentsPageStyles.backArrowImage}
             resizeMode={"stretch"}
-              source={require("./img/PaymentsPage/hdpi/BackArrow.png")}
+              source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
           </View>
@@ -37,14 +37,14 @@ class PaymentsPageComponent extends Component {
        <Image 
             style={PaymentsPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/PaymentsPage/hdpi/ScanToPayTab.png")}
+              source={require("../img/PaymentsPage/hdpi/ScanToPayTab.png")}
               key={"abcdeesdwdfg"}
           >
           <View style = {PaymentsPageStyles.balanceTextView}>
               <Image 
                   style={HistoryPageStyles.ScanButton}
                   resizeMode={"stretch"}
-                  source={require("./img/PaymentsPage/hdpi/ScanButton.png")}
+                  source={require("../img/PaymentsPage/hdpi/ScanButton.png")}
                   key={"abcdeesddsadwdfg"}
                 />
           </View>
@@ -53,14 +53,14 @@ class PaymentsPageComponent extends Component {
           <Image 
             style={PaymentsPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/PaymentsPage/hdpi/TransfertoFriendTab.png")}
+              source={require("../img/PaymentsPage/hdpi/TransfertoFriendTab.png")}
               key={"abcdeescfdsfddwdfg"}
           >
           <View style = {PaymentsPageStyles.balanceTextView}>
               <Image 
                   style={PaymentsPageStyles.transferButton}
                   resizeMode={"stretch"}
-                  source={require("./img/PaymentsPage/hdpi/TransferButton.png")}
+                  source={require("../img/PaymentsPage/hdpi/TransferButton.png")}
                   key={"abcdeesddsadwdfg"}
                 />
           </View>

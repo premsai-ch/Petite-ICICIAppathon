@@ -21,13 +21,13 @@ class StartPageComponent extends Component {
     <Image
             style={startpageStyles.logo}
             resizeMode={"contain"}
-            source={require('./img/StartPage/hdpi/Logo.png')}
+            source={require('../img/StartPage/hdpi/Logo.png')}
             />  
         
       <Image
             style={startpageStyles.iciciLogo}
             resizeMode={"contain"}
-            source={require('./img/StartPage/hdpi/ICICILogo.png')}
+            source={require('../img/StartPage/hdpi/ICICILogo.png')}
             /> 
     </View>
     <View style={startpageStyles.seconddiv}>
@@ -38,7 +38,7 @@ class StartPageComponent extends Component {
       <Image
             style={startpageStyles.princeImage}
             resizeMode={"cover"}
-            source={require('./img/StartPage/hdpi/Prince.png')}
+            source={require('../img/StartPage/hdpi/Prince.png')}
             /> 
      </TouchableHighlight>
  
@@ -59,7 +59,7 @@ class StartPageComponent extends Component {
         <Image
               style={startpageStyles.princessImage}
               resizeMode={"stretch"}
-            source={require('./img/StartPage/hdpi/Princess.png')}
+            source={require('../img/StartPage/hdpi/Princess.png')}
               /> 
          </TouchableHighlight>
       <Text style={startpageStyles.princessText}>

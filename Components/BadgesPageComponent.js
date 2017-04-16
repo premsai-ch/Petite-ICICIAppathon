@@ -20,14 +20,14 @@ class BadgesPageComponent extends Component {
           <Image 
             style={BadgesPageStyles.topbarImage}
             resizeMode={"stretch"}
-            source={require("./img/BadgesPage/hdpi/BadgesTopBar.png")}
+            source={require("../img/BadgesPage/hdpi/BadgesTopBar.png")}
             key={"abcdeefhfg"}
           >
             <View style={BadgesPageStyles.backArrowView}>
                 <Image 
                   style={BadgesPageStyles.backArrowImage}
                   resizeMode={"stretch"}
-                  source={require("./img/BadgesPage/hdpi/BackArrow.png")}
+                  source={require("../img/BadgesPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
             </View>
@@ -37,21 +37,21 @@ class BadgesPageComponent extends Component {
           <Image 
                   style={BadgesPageStyles.BadgesBGImage}
                   resizeMode={"stretch"}
-                  source={require("./img/BadgesPage/hdpi/BadgesBG.png")}
+                  source={require("../img/BadgesPage/hdpi/BadgesBG.png")}
                   key={"abfdskblfdsdadcdeefg"}
             >
             <View style = {BadgesPageStyles.AddphotoImageView} >
               <Image 
                   style={BadgesPageStyles.AddphotoImage}
                   resizeMode={"stretch"}
-                  source={require("./img/BadgesPage/hdpi/AddPhoto.png")}
+                  source={require("../img/BadgesPage/hdpi/AddPhoto.png")}
                   key={"abfdskblfdsdadcdeefg"}
                 >
                 <View style={{flex:1, justifyContent:'center'}}>
                    <Image 
                     style={BadgesPageStyles.BadgeImage}
                     resizeMode={"stretch"}
-                    source={require("./img/BadgesPage/hdpi/Badge.png")}
+                    source={require("../img/BadgesPage/hdpi/Badge.png")}
                     key={"abfdskblfdsdadfjccdeefg"}
                 />
                 </View>
@@ -67,7 +67,7 @@ class BadgesPageComponent extends Component {
               <Image 
                     style={BadgesPageStyles.starsImage}
                     resizeMode={"stretch"}
-                    source={require("./img/BadgesPage/hdpi/3Stars.png")}
+                    source={require("../img/BadgesPage/hdpi/3Stars.png")}
                     key={"abfdskblfdsdfdfdadfjccdeefg"}
                 />
             </View>

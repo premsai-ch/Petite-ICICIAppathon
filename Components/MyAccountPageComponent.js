@@ -20,14 +20,14 @@ class MyAccountPageComponent extends Component {
           <Image 
             style={MyAccountPageStyles.topbarImage}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/TopbarAccount.png")}
+              source={require("../img/AccountsPage/hdpi/TopbarAccount.png")}
               key={"abcdeefg"}
           >
           <View style={MyAccountPageStyles.backArrowView}>
               <Image 
             style={MyAccountPageStyles.backArrowImage}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/BackArrow.png")}
+              source={require("../img/AccountsPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
           </View>
@@ -37,7 +37,7 @@ class MyAccountPageComponent extends Component {
           <Image 
             style={MyAccountPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/Balancetab.png")}
+              source={require("../img/AccountsPage/hdpi/Balancetab.png")}
               key={"abcdeesdwdfg"}
           >
           <View style = {MyAccountPageStyles.balanceTextView}>
@@ -49,7 +49,7 @@ class MyAccountPageComponent extends Component {
           <Image 
             style={MyAccountPageStyles.AskforMoneyTabImage}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/AskMoneyTab.png")}
+              source={require("../img/AccountsPage/hdpi/AskMoneyTab.png")}
               key={"abcdeesdwfdsfdfg"}
             >
           <View style= {MyAccountPageStyles.AskforMoneyTabView}>
@@ -57,7 +57,7 @@ class MyAccountPageComponent extends Component {
             <Image 
             style={MyAccountPageStyles.moneyInput}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/MoneyInput.png")}
+              source={require("../img/AccountsPage/hdpi/MoneyInput.png")}
               key={"abcdeesdwfdsfdfg"}
               >
               <View style= {MyAccountPageStyles.MoneyInputTextFieldView}>
@@ -67,7 +67,7 @@ class MyAccountPageComponent extends Component {
             <Image 
             style={MyAccountPageStyles.Askbutton}
             resizeMode={"stretch"}
-              source={require("./img/AccountsPage/hdpi/askButton.png")}
+              source={require("../img/AccountsPage/hdpi/askButton.png")}
               key={"abcdeesdwdfsaffdsfdfg"}
               />
 

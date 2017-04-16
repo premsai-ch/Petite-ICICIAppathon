@@ -34,7 +34,7 @@ class HomePageComponent extends Component {
               <Image
                 style={HomePagestyles.HomePageBackGroundImage}
                 resizeMode={"stretch"}
-                source={require("./img/HomePage/hdpi/HomePageBackGround.png")}
+                source={require("../img/HomePage/hdpi/HomePageBackGround.png")}
                 key = {"123456"}
                 >
                 <View style= {{flex:1}}>

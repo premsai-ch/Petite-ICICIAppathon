@@ -1,7 +1,7 @@
 import React, { Component, } from 'react'
 import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
 
-class ScanPageComponent extends Component {
+class MinistatementPageComponent extends Component {
 
   static propTypes = {}
 
@@ -18,14 +18,14 @@ class ScanPageComponent extends Component {
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
-            style={ScanPageStyles.topbarImage}
+            style={MinistatementPageStyles.topbarImage}
             resizeMode={"stretch"}
             source={require("../img/PaymentsPage/hdpi/PaymentsTopBar.png")}
             key={"abcdeefhfg"}
           >
-            <View style={ScanPageStyles.backArrowView}>
+            <View style={MinistatementPageStyles.backArrowView}>
                 <Image 
-                  style={ScanPageStyles.backArrowImage}
+                  style={MinistatementPageStyles.backArrowImage}
                   resizeMode={"stretch"}
                   source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
@@ -34,35 +34,29 @@ class ScanPageComponent extends Component {
           </Image>
         </View>
         <View style= {{flex: 6}}>
-          <View style= {ScanPageStyles.scanTabView}>
-            <Image 
-                  style={{width:400, height: 100}}
+        <View style= {{flex:8, justifyContent:'center',alignItems:'center'}}>
+          <Image 
+                  style={{width: 380, height: 430,}}
                   resizeMode={"stretch"}
-                  source={require("../img/ScanPage/hdpi/ScanTab.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/TransferToFriendBG.png")}
                   key={"abfdskblfadcdeefg"}
-              />
-          </View>
-          
-          <View style= {ScanPageStyles.QRImageView}>
-            <Image 
-                  style={{width: 272, height: 260,}}
-                  resizeMode={"stretch"}
-                  source={require("../img/ScanPage/hdpi/QRImage.png")}
-                  key={"abfdskblfdaffadcdeefg"}
-              />
+            >
+              <View style= {{flex :1, justifyContent: 'space-around',alignItems:'center',marginTop:30}}>
+                <View style={{width: 250, height: 42, backgroundColor: 'powderblue'}} />
+                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
+                <View style={{width: 250, height: 42, backgroundColor: 'yellow'}} />
+                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
+                <View style={{width: 250, height: 42, backgroundColor: 'orange'}} />
+                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
+                <View style={{width: 250, height: 42, backgroundColor: 'red'}} />
+                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
+                <View style={{width: 250, height: 42, backgroundColor: 'blue'}} />
 
+              </View>
+          </Image>
           </View>
-          
-          <View style={ScanPageStyles.payButtonView}>
-            <Image 
-                  style={{width: 240, height: 78,}}
-                  resizeMode={"stretch"}
-                  source={require("../img/ScanPage/hdpi/PayButton.png")}
-                  key={"abfdskbfdsalfddsaaffadcdeefg"}
-              />
-          </View>
-          
-            <View style={ScanPageStyles.footerView}>
+        </View>
+        <View style={MinistatementPageStyles.footerView}>
               <Image 
                   style={{marginRight:24, width: 60, height: 60,}}
                   resizeMode={"stretch"}
@@ -76,17 +70,13 @@ class ScanPageComponent extends Component {
                   key={"abfdskbfdsaldsadfdaffadcdeefg"}
               />
           </View>
-          
-        </View>
       </BackgroundImage>
       </View>
     )
   }
 }
 
-
-const ScanPageStyles = StyleSheet.create({
-  
+const MinistatementPageStyles = StyleSheet.create({
   backArrowView: {
     flex:1,
     justifyContent:'center',
@@ -102,28 +92,12 @@ const ScanPageStyles = StyleSheet.create({
     width:null,
     height:null,
   },
-  scanTabView: {
-    flex:2, 
-    justifyContent:'space-around', 
-    alignItems:'center',
-  },
-  QRImageView: {
-    flex:5, 
-    justifyContent:'space-around', 
-    alignItems:'center',
-  },
-  payButtonView: {
-    flex:2,  
-    justifyContent:'space-around', 
-    alignItems:'center',
-  },
   footerView: {
     flex:1, 
     flexDirection:'row',
     justifyContent:"flex-end",
     alignItems:'center',
   }
-  
 })
 
-export default ScanPageComponent
+export default MinistatementPageComponent

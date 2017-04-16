@@ -1,5 +1,5 @@
 import React, { Component, } from 'react'
-import { View, } from 'react-native'
+import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
 
 class TransferPageComponent extends Component {
 
@@ -20,14 +20,14 @@ class TransferPageComponent extends Component {
           <Image 
             style={TransferPageStyles.topbarImage}
             resizeMode={"stretch"}
-            source={require("./img/PaymentsPage/hdpi/PaymentsTopBar.png")}
+            source={require("../img/PaymentsPage/hdpi/PaymentsTopBar.png")}
             key={"abcdeefhfg"}
           >
             <View style={TransferPageStyles.backArrowView}>
                 <Image 
                   style={TransferPageStyles.backArrowImage}
                   resizeMode={"stretch"}
-                  source={require("./img/PaymentsPage/hdpi/BackArrow.png")}
+                  source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
             </View>
@@ -38,14 +38,14 @@ class TransferPageComponent extends Component {
           <Image 
                   style={{width: 380, height: 430,}}
                   resizeMode={"stretch"}
-                  source={require("./img/TransferToFriendPage/hdpi/TransferToFriendBG.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/TransferToFriendBG.png")}
                   key={"abfdskblfadcdeefg"}
                 >
             <View style={TransferPageStyles.transferBGView}>
                   <Image 
                   style={TransferPageStyles.inputTextBoxStyle}
                   resizeMode={"stretch"}
-                  source={require("./img/TransferToFriendPage/hdpi/textInputbox.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/textInputbox.png")}
                   key={"abfdskblrewrfafdsfdcdeefg"}
                   >
                   <View style= {TransferPageStyles.inputTextView}>
@@ -57,7 +57,7 @@ class TransferPageComponent extends Component {
                   <Image 
                   style={TransferPageStyles.inputTextBoxStyle}
                   resizeMode={"stretch"}
-                  source={require("./img/TransferToFriendPage/hdpi/textInputbox.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/textInputbox.png")}
                   key={"abfdskdsasfdblfadcdeefg"}  
                   >
                   <View style= {TransferPageStyles.inputTextView}>
@@ -68,7 +68,7 @@ class TransferPageComponent extends Component {
                   <Image 
                   style={TransferPageStyles.inputTextBoxStyle}
                   resizeMode={"stretch"}
-                  source={require("./img/TransferToFriendPage/hdpi/textInputbox.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/textInputbox.png")}
                   key={"abfdskblfadcdeffhhefg"}
                   >
                   <View style= {TransferPageStyles.inputTextView}>
@@ -80,7 +80,7 @@ class TransferPageComponent extends Component {
                   <Image 
                   style={TransferPageStyles.transferButtonStyle}
                   resizeMode={"stretch"}
-                  source={require("./img/TransferToFriendPage/hdpi/TransferButton.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/TransferButton.png")}
                   key={"abfdskblfadcdehhhdefg"}
                   />
 
@@ -93,13 +93,13 @@ class TransferPageComponent extends Component {
               <Image 
                   style={{marginRight:24, width: 60, height: 60,}}
                   resizeMode={"stretch"}
-                  source={require("./img/ScanPage/hdpi/HomeButton.png")}
+                  source={require("../img/ScanPage/hdpi/HomeButton.png")}
                   key={"abfdskbfdsalfdaffadcdeefg"}
               />
               <Image 
                   style={{width: 160, height: 40,}}
                   resizeMode={"stretch"}
-                  source={require("./img/ScanPage/hdpi/ICICILogo.png")}
+                  source={require("../img/ScanPage/hdpi/ICICILogo.png")}
                   key={"abfdskbfdsaldsadfdaffadcdeefg"}
               />
           </View>

@@ -17,21 +17,17 @@ import {
   Image,
   Alert,
 } from 'react-native'
-import StartPageComponent from './StartPageComponent.js'
-import BackgroundImage from './BackgroundImage.js'
+import BackgroundImage from './Components/BackgroundImage.js'
 
 class Project extends Component {
   render() {
     return (    
       <BackgroundImage>
+       
       </BackgroundImage>
     );
   }
 }
 
-
-const TransferPageStyles = StyleSheet.create({
-
-})
 
 AppRegistry.registerComponent('Project', () => Project);

@@ -20,14 +20,14 @@ class HistoryPageComponent extends Component {
           <Image 
             style={HistoryPageStyles.topbarImage}
             resizeMode={"stretch"}
-              source={require("./img/HistoryPage/hdpi/HistoryTopBar.png")}
+              source={require("../img/HistoryPage/hdpi/HistoryTopBar.png")}
               key={"abcdeefg"}
           >
           <View style={HistoryPageStyles.backArrowView}>
               <Image 
             style={HistoryPageStyles.backArrowImage}
             resizeMode={"stretch"}
-              source={require("./img/HistoryPage/hdpi/BackArrow.png")}
+              source={require("../img/HistoryPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
           </View>
@@ -37,7 +37,7 @@ class HistoryPageComponent extends Component {
        <Image 
             style={HistoryPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/HistoryPage/hdpi/Balancetab.png")}
+              source={require("../img/HistoryPage/hdpi/Balancetab.png")}
               key={"abcdeesdwdfg"}
           >
           <View style = {HistoryPageStyles.balanceTextView}>
@@ -50,7 +50,7 @@ class HistoryPageComponent extends Component {
           <Image 
             style={HistoryPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/HistoryPage/hdpi/AllowanceTab.png")}
+              source={require("../img/HistoryPage/hdpi/AllowanceTab.png")}
               key={"abcdeescfdsfddwdfg"}
           >
           <View style = {HistoryPageStyles.balanceTextView}>
@@ -62,7 +62,7 @@ class HistoryPageComponent extends Component {
           <Image 
             style={HistoryPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("./img/HistoryPage/hdpi/MiniStatementTab.png")}
+              source={require("../img/HistoryPage/hdpi/MiniStatementTab.png")}
               key={"abcdeescfdsffdsfddwdfg"}
           />
         </View>

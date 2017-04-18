@@ -1,5 +1,7 @@
 import React, { Component, } from 'react'
-import { View, Image, Text, StyleSheet} from 'react-native'
+import { View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
 
 class HistoryPageComponent extends Component {
 
@@ -10,11 +12,17 @@ class HistoryPageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+     this.navigate = this.navigate.bind(this)
+  }
+
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
   }
 
   render() {
     return (
-      <View>
         <BackgroundImage>
           <View style={{flex: 1}}>
           <Image 
@@ -24,12 +32,17 @@ class HistoryPageComponent extends Component {
               key={"abcdeefg"}
           >
           <View style={HistoryPageStyles.backArrowView}>
+            <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
             style={HistoryPageStyles.backArrowImage}
             resizeMode={"stretch"}
               source={require("../img/HistoryPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
+            </TouchableOpacity>
           </View>
           </Image>
         </View>
@@ -59,16 +72,20 @@ class HistoryPageComponent extends Component {
               </Text>
           </View>
           </Image>
+          <TouchableOpacity
+                onPress={() => {this.navigate('ministatement')}}
+                activeOpacity={60 / 100}
+              >
           <Image 
             style={HistoryPageStyles.balanceTabImage}
             resizeMode={"stretch"}
               source={require("../img/HistoryPage/hdpi/MiniStatementTab.png")}
               key={"abcdeescfdsffdsfddwdfg"}
           />
+          </TouchableOpacity>
         </View>
           
         </BackgroundImage>  
-      </View>
     )
   }
 }

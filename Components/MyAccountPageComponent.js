@@ -1,5 +1,7 @@
 import React, { Component, } from 'react'
-import { View, Image, TextInput, Text, StyleSheet } from 'react-native'
+import { View, Image, TextInput, Alert, Text, StyleSheet,TouchableOpacity, Keyboard } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
 
 class MyAccountPageComponent extends Component {
 
@@ -9,12 +11,19 @@ class MyAccountPageComponent extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {text: 'Enter the Amount', 'amount': '0'}
+    this.navigate = this.navigate.bind(this)
   }
 
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
+  }
+  
+  
   render() {
     return (
-      <View>
       <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
@@ -24,12 +33,17 @@ class MyAccountPageComponent extends Component {
               key={"abcdeefg"}
           >
           <View style={MyAccountPageStyles.backArrowView}>
+            <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
             style={MyAccountPageStyles.backArrowImage}
             resizeMode={"stretch"}
               source={require("../img/AccountsPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
+            </TouchableOpacity>
           </View>
           </Image>
         </View>
@@ -37,7 +51,7 @@ class MyAccountPageComponent extends Component {
           <Image 
             style={MyAccountPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/Balancetab.png")}
+              source={require("../img/AccountsPage/hdpi/BalanceTab.png")}
               key={"abcdeesdwdfg"}
           >
           <View style = {MyAccountPageStyles.balanceTextView}>
@@ -61,23 +75,42 @@ class MyAccountPageComponent extends Component {
               key={"abcdeesdwfdsfdfg"}
               >
               <View style= {MyAccountPageStyles.MoneyInputTextFieldView}>
-                <TextInput style={MyAccountPageStyles.MoneyInputText}> Enter the Amount</TextInput>
+                <TextInput style={MyAccountPageStyles.MoneyInputText}
+                  underlineColorAndroid = {'transparent'}
+                  selectTextOnFocus={true}
+                  ref="input"
+                  returnKeyType={'done'}
+                  keyboardType="numeric"
+                  onSubmitEditing={
+                    (event)=> {this.setState({amount:event.nativeEvent.text}); this.refs.input.blur()} }
+                  >Enter the Amount </TextInput> 
               </View>
             </Image>
-            <Image 
-            style={MyAccountPageStyles.Askbutton}
-            resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/askButton.png")}
-              key={"abcdeesdwdfsaffdsfdfg"}
-              />
-
+            <TouchableOpacity
+                onPress={() => Alert.alert(
+                                'Confirmation',
+                                'I want to ask my parents for '+this.state.amount+' Rupees',
+                                [
+                                  {text: 'NO', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                                  {text: 'YES', onPress: () => console.log('OK Pressed')},
+                                ],
+                                { cancelable: false }
+                              )}
+                activeOpacity={60 / 100}
+              >
+                <Image 
+                  style={MyAccountPageStyles.Askbutton}
+                  resizeMode={"stretch"}
+                  source={require("../img/AccountsPage/hdpi/askButton.png")}
+                  key={"abcdeesdwdfsaffdsfdfg"}
+                  />
+            </TouchableOpacity>
 
           </View>
           </Image>
 
         </View>
         </BackgroundImage> 
-      </View>
     )
   }
 }
@@ -151,11 +184,11 @@ const MyAccountPageStyles = StyleSheet.create({
   },
   MoneyInputText: {
     fontFamily: "Azo Sans Uber",
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 52,
     textAlign: 'center',
     color: '#FFFFFF',
-    marginLeft: 10,
+    marginLeft: 14,
   },
   MoneyInputTextFieldView: {
     flex:1, 

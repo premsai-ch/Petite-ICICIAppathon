@@ -1,5 +1,8 @@
 import React, { Component, } from 'react'
-import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
+import { View,StyleSheet,Image,Text,TouchableOpacity } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
+
 
 class MinistatementPageComponent extends Component {
 
@@ -10,30 +13,41 @@ class MinistatementPageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+       this.navigate = this.navigate.bind(this)
+  }
+
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
   }
 
   render() {
     return (
-      <View>
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
             style={MinistatementPageStyles.topbarImage}
             resizeMode={"stretch"}
-            source={require("../img/PaymentsPage/hdpi/PaymentsTopBar.png")}
+            source={require("../img/HistoryPage/hdpi/HistoryTopBar.png")}
             key={"abcdeefhfg"}
           >
             <View style={MinistatementPageStyles.backArrowView}>
+              <TouchableOpacity
+                onPress={() => {this.navigate('history')}}
+                activeOpacity={60 / 100}
+              >
                 <Image 
                   style={MinistatementPageStyles.backArrowImage}
                   resizeMode={"stretch"}
-                  source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
+                  source={require("../img/HistoryPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
+              </TouchableOpacity>
             </View>
           </Image>
         </View>
-        <View style= {{flex: 6}}>
+        <View style= {{flex: 5}}>
         <View style= {{flex:8, justifyContent:'center',alignItems:'center'}}>
           <Image 
                   style={{width: 380, height: 430,}}
@@ -41,28 +55,91 @@ class MinistatementPageComponent extends Component {
                   source={require("../img/TransferToFriendPage/hdpi/TransferToFriendBG.png")}
                   key={"abfdskblfadcdeefg"}
             >
-              <View style= {{flex :1, justifyContent: 'space-around',alignItems:'center',marginTop:30}}>
-                <View style={{width: 250, height: 42, backgroundColor: 'powderblue'}} />
-                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
-                <View style={{width: 250, height: 42, backgroundColor: 'yellow'}} />
-                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
-                <View style={{width: 250, height: 42, backgroundColor: 'orange'}} />
-                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
-                <View style={{width: 250, height: 42, backgroundColor: 'red'}} />
-                <View style={{width: 300, height: 3, backgroundColor: 'green'}} />
-                <View style={{width: 250, height: 42, backgroundColor: 'blue'}} />
+              <View style= {{flex :1,marginTop:30}}>
+                <View style={MinistatementPageStyles.eachRowView} >
+                  <Image 
+                      style={MinistatementPageStyles.handIconStyle}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/TransferHandIcon.png")}
+                      key={"abfdskblfadcdffdfseefg"}
+                    />
+                  <Text style={MinistatementPageStyles.dataTextStyle}>21/12/16</Text>
+                  <Text style={MinistatementPageStyles.transferamountTextStyle}>200</Text>
+                  
+                </View>
+                
+                <Image 
+                      style={MinistatementPageStyles.horizontalLine}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
+                      key={"abfdskblfadcdffdfseefg"}
+                />
+               
+                
+                <View style={MinistatementPageStyles.eachRowView}>
+                <Image 
+                      style={MinistatementPageStyles.icons}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/PiggyBankIcon.png")}
+                      key={"abfdskblfadcdffdfseefg"}
+                    />
+                  <Text style={MinistatementPageStyles.dataTextStyle}>10/11/16</Text>
+                  <Text style={MinistatementPageStyles.amountTextStyle}>250</Text>
+                  
+                </View>
+                
+                
+                <Image 
+                      style={MinistatementPageStyles.horizontalLine}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
+                      key={"abfdskblfaddsdcdffdfseefg"}
+                />
+               <View style={MinistatementPageStyles.eachRowView}>
+                <Image 
+                      style={MinistatementPageStyles.icons}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/3CurrencyNotesIcon.png")}
+                      key={"abfdskblfadcdffdfseefg"}
+                    />
+                  <Text style={MinistatementPageStyles.dataTextStyle}>09/10/16</Text>
+                  <Text style={MinistatementPageStyles.minusamountTextStyle}>300</Text>
+                  
+                </View>
+                  <Image 
+                      style={MinistatementPageStyles.horizontalLine}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
+                      key={"abfdskblfadcdffdsfdfseefg"}
+                />                
+                <View style={MinistatementPageStyles.eachRowView}>
+                <Image 
+                      style={MinistatementPageStyles.icons}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/PiggyBankIcon.png")}
+                      key={"abfdskblfffsadcdffdfseefg"}
+                    />
+                  <Text style={MinistatementPageStyles.dataTextStyle}>06/08/16</Text>
+                  <Text style={MinistatementPageStyles.amountTextStyle}>600</Text>
+                  
+                </View>
 
               </View>
           </Image>
           </View>
         </View>
         <View style={MinistatementPageStyles.footerView}>
+            <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
                   style={{marginRight:24, width: 60, height: 60,}}
                   resizeMode={"stretch"}
                   source={require("../img/ScanPage/hdpi/HomeButton.png")}
                   key={"abfdskbfdsalfdaffadcdeefg"}
               />
+          </TouchableOpacity>
               <Image 
                   style={{width: 160, height: 40,}}
                   resizeMode={"stretch"}
@@ -71,7 +148,6 @@ class MinistatementPageComponent extends Component {
               />
           </View>
       </BackgroundImage>
-      </View>
     )
   }
 }
@@ -97,6 +173,57 @@ const MinistatementPageStyles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:"flex-end",
     alignItems:'center',
+  },
+  eachRowView: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  icons: {
+    width: 58, 
+    height: 58,
+  },
+  horizontalLine: {
+    alignSelf:'center',
+    width: 300, 
+    height: 3,
+  },
+  amountTextStyle: {
+    height: 42,
+    color: '#44DB5E',
+    fontFamily: "Azo Sans Uber",
+    fontSize: 32,
+    lineHeight: 42,
+    textAlign: 'center',
+  },
+  minusamountTextStyle: {
+    height: 42,
+    color: '#F25170',
+    fontFamily: "Azo Sans Uber",
+    fontSize: 32,
+    lineHeight: 42,
+    textAlign: 'center',
+  },
+  transferamountTextStyle: {
+    height: 42,
+    color: '#FFFFFF',
+    fontFamily: "Azo Sans Uber",
+    fontSize: 32,
+    lineHeight: 42,
+    textAlign: 'center',
+  },
+  handIconStyle:{
+    height: 29,
+    width: 63,
+  },
+  dataTextStyle: {
+    height: 32,
+    color: "#FFFFFF",
+    fontFamily: "Azo Sans Uber",
+    fontSize: 24,
+    lineHeight: 32,
+    textAlign: 'center',
   }
 })
 

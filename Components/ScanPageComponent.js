@@ -1,5 +1,8 @@
 import React, { Component, } from 'react'
-import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
+import { View,StyleSheet,Image,Text,TouchableHighlight,TextInput,Alert,TouchableOpacity } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
+
 
 class ScanPageComponent extends Component {
 
@@ -9,12 +12,20 @@ class ScanPageComponent extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {amount:'0'}
+    
+    this.navigate = this.navigate.bind(this)
   }
+
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
+  }
+  
 
   render() {
     return (
-      <View>
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
@@ -24,12 +35,17 @@ class ScanPageComponent extends Component {
             key={"abcdeefhfg"}
           >
             <View style={ScanPageStyles.backArrowView}>
+              <TouchableOpacity
+                onPress={() => {this.navigate('payments')}}
+                activeOpacity={60 / 100}
+              >
                 <Image 
                   style={ScanPageStyles.backArrowImage}
                   resizeMode={"stretch"}
                   source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
+              </TouchableOpacity>
             </View>
           </Image>
         </View>
@@ -38,9 +54,19 @@ class ScanPageComponent extends Component {
             <Image 
                   style={{width:400, height: 100}}
                   resizeMode={"stretch"}
-                  source={require("../img/ScanPage/hdpi/ScanTab.png")}
+                  source={require("../img/RegistrationPage/hdpi/TextInput.png")}
                   key={"abfdskblfadcdeefg"}
-              />
+              >
+              <TextInput style={ScanPageStyles.MoneyInputText}
+                  underlineColorAndroid = {'transparent'}
+                  selectTextOnFocus={true}
+                  ref="amount"
+                  returnKeyType={'done'}
+                  keyboardType="numeric"
+                  onSubmitEditing={
+                    (event)=> {this.setState({amount:event.nativeEvent.text}); this.refs.amount.blur()} }
+                  >Amount </TextInput> 
+            </Image>
           </View>
           
           <View style= {ScanPageStyles.QRImageView}>
@@ -54,21 +80,39 @@ class ScanPageComponent extends Component {
           </View>
           
           <View style={ScanPageStyles.payButtonView}>
+            <TouchableOpacity
+                onPress={() => Alert.alert(
+                                'Confirmation',
+                                'Are you sure you want to pay '+this.state.amount+' Rupees ?',
+                                [
+                                  {text: 'NO', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                                  {text: 'YES', onPress: () => console.log('OK Pressed')},
+                                ],
+                                { cancelable: false }
+                              )}
+                activeOpacity={60 / 100}
+              >
             <Image 
                   style={{width: 240, height: 78,}}
                   resizeMode={"stretch"}
                   source={require("../img/ScanPage/hdpi/PayButton.png")}
                   key={"abfdskbfdsalfddsaaffadcdeefg"}
               />
+            </TouchableOpacity>
           </View>
           
             <View style={ScanPageStyles.footerView}>
+              <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
                   style={{marginRight:24, width: 60, height: 60,}}
                   resizeMode={"stretch"}
                   source={require("../img/ScanPage/hdpi/HomeButton.png")}
                   key={"abfdskbfdsalfdaffadcdeefg"}
               />
+              </TouchableOpacity>
               <Image 
                   style={{width: 160, height: 40,}}
                   resizeMode={"stretch"}
@@ -79,7 +123,6 @@ class ScanPageComponent extends Component {
           
         </View>
       </BackgroundImage>
-      </View>
     )
   }
 }
@@ -122,6 +165,14 @@ const ScanPageStyles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:"flex-end",
     alignItems:'center',
+  },
+  MoneyInputText: {
+     fontFamily: "Azo Sans Uber",
+    fontSize: 36,
+    lineHeight: 52,
+    textAlign: 'center',
+    color: '#FFFFFF',
+    marginTop: 8,
   }
   
 })

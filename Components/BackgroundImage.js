@@ -15,8 +15,9 @@ class BackgroundImage extends Component {
   render() {
      return (
             <Image source={require('../img/StartPage/hdpi/BG_Image.png')}
-                  style={styles.backgroundImage}>
-
+                  style={styles.backgroundImage} 
+                  resizeMode={'cover'}
+              >
                   {this.props.children}
 
             </Image>
@@ -26,10 +27,10 @@ class BackgroundImage extends Component {
 
 const styles = StyleSheet.create({
   backgroundImage: {
-        flex: 1,
+        flex:1,
         width: null,
         height: null,
-        resizeMode: 'cover'
+        
     },
 })
 

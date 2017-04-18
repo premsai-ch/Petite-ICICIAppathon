@@ -1,5 +1,7 @@
 import React, { Component, } from 'react'
-import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
+import { View,StyleSheet,Image,Text,TouchableOpacity,TextInput,Alert } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
 
 class TransferPageComponent extends Component {
 
@@ -9,12 +11,20 @@ class TransferPageComponent extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {amount:'0',comments:'',friendId:''}
+    
+    this.navigate = this.navigate.bind(this)
   }
+
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
+  }
+  
 
   render() {
     return (
-      <View>
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
@@ -24,12 +34,17 @@ class TransferPageComponent extends Component {
             key={"abcdeefhfg"}
           >
             <View style={TransferPageStyles.backArrowView}>
+              <TouchableOpacity
+                onPress={() => {this.navigate('payments')}}
+                activeOpacity={60 / 100}
+              >
                 <Image 
                   style={TransferPageStyles.backArrowImage}
                   resizeMode={"stretch"}
                   source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
+              </TouchableOpacity>
             </View>
           </Image>
         </View>
@@ -49,8 +64,15 @@ class TransferPageComponent extends Component {
                   key={"abfdskblrewrfafdsfdcdeefg"}
                   >
                   <View style= {TransferPageStyles.inputTextView}>
-                    <TextInput underlineColorAndroid='transparent' style={TransferPageStyles.inputTextStyle}>
-                      FRIEND'S BANK ID</TextInput>
+                    <TextInput style={TransferPageStyles.inputTextStyle}
+                      underlineColorAndroid = {'transparent'}
+                      selectTextOnFocus={true}
+                      ref="input"
+                      returnKeyType={'done'}
+                      keyboardType="default"
+                      onSubmitEditing={
+                      (event)=> {this.setState({friendId:event.nativeEvent.text}); this.refs.input.blur()} }
+                  >FRIEND'S ID </TextInput>
                   </View>
                   </Image>
               
@@ -61,8 +83,15 @@ class TransferPageComponent extends Component {
                   key={"abfdskdsasfdblfadcdeefg"}  
                   >
                   <View style= {TransferPageStyles.inputTextView}>
-                    <TextInput underlineColorAndroid='transparent' style={TransferPageStyles.inputTextStyle}> 
-                      AMOUNT</TextInput>
+                  <TextInput style={TransferPageStyles.inputTextStyle}
+                      underlineColorAndroid = {'transparent'}
+                      selectTextOnFocus={true}
+                      ref="input"
+                      returnKeyType={'done'}
+                      keyboardType="numeric"
+                      onSubmitEditing={
+                      (event)=> {this.setState({amount:event.nativeEvent.text}); this.refs.input.blur()} }
+                  >AMOUNT </TextInput>
                   </View>
                   </Image>
                   <Image 
@@ -72,17 +101,36 @@ class TransferPageComponent extends Component {
                   key={"abfdskblfadcdeffhhefg"}
                   >
                   <View style= {TransferPageStyles.inputTextView}>
-                    <TextInput underlineColorAndroid='transparent' style={TransferPageStyles.inputTextStyle}> 
-                      COMMENTS</TextInput>
+                    <TextInput style={TransferPageStyles.inputTextStyle}
+                      underlineColorAndroid = {'transparent'}
+                      selectTextOnFocus={true}
+                      ref="input"
+                      returnKeyType={'done'}
+                      keyboardType="default"
+                      onSubmitEditing={
+                      (event)=> {this.setState({comments:event.nativeEvent.text}); this.refs.input.blur()} }
+                  >COMMENTS </TextInput>
                   </View>
                   </Image>
-              
+                  <TouchableOpacity
+                    onPress={() => Alert.alert(
+                                'Confirmation',
+                                'I want to transfer '+this.state.friendId+ ' a sum of '+this.state.amount+' Rupees',
+                                [
+                                  {text: 'NO', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                                  {text: 'YES', onPress: () => console.log('OK Pressed')},
+                                ],
+                                { cancelable: false }
+                              )}
+                    activeOpacity={60 / 100}
+                    >
                   <Image 
                   style={TransferPageStyles.transferButtonStyle}
                   resizeMode={"stretch"}
                   source={require("../img/TransferToFriendPage/hdpi/TransferButton.png")}
                   key={"abfdskblfadcdehhhdefg"}
                   />
+              </TouchableOpacity>
 
 
             </View>
@@ -90,12 +138,17 @@ class TransferPageComponent extends Component {
         </View>
         
         <View style={TransferPageStyles.footerView}>
+          <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
                   style={{marginRight:24, width: 60, height: 60,}}
                   resizeMode={"stretch"}
                   source={require("../img/ScanPage/hdpi/HomeButton.png")}
                   key={"abfdskbfdsalfdaffadcdeefg"}
               />
+          </TouchableOpacity>
               <Image 
                   style={{width: 160, height: 40,}}
                   resizeMode={"stretch"}
@@ -105,7 +158,6 @@ class TransferPageComponent extends Component {
           </View>
         </View>
       </BackgroundImage>
-      </View>
     )
   }
 }

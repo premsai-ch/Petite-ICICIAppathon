@@ -1,5 +1,12 @@
 import React, { Component, } from 'react'
-import { View,StyleSheet,Image,Text,TouchableHighlight } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+} from 'react-native'
 import BackgroundImage from './BackgroundImage.js'
 
 class StartPageComponent extends Component {
@@ -11,144 +18,120 @@ class StartPageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+    
+    this.navigate = this.navigate.bind(this)
   }
 
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
+  }
+  
   render() {
     return (
-      <BackgroundImage>
+  <BackgroundImage>
     <View style={startpageStyles.topdiv}>    
     
     <Image
             style={startpageStyles.logo}
             resizeMode={"contain"}
             source={require('../img/StartPage/hdpi/Logo.png')}
+            key={"bcdlkscbvd"}
             />  
         
       <Image
             style={startpageStyles.iciciLogo}
             resizeMode={"contain"}
             source={require('../img/StartPage/hdpi/ICICILogo.png')}
+            key={"bckdacdis"}
             /> 
     </View>
-    <View style={startpageStyles.seconddiv}>
-      <TouchableHighlight
-          onPress={() => {}}
-          activeOpacity={75 / 100}
-          underlayColor={"rgba(221,99,99,1)"}>
-      <Image
-            style={startpageStyles.princeImage}
-            resizeMode={"cover"}
+    <View style= {startpageStyles.seconddiv}>
+      <TouchableOpacity
+          onPress={() => {this.navigate('loginPage')}}
+          activeOpacity={60 / 100}
+          >
+        <Image
+              style={startpageStyles.princessImage}
+              resizeMode={"stretch"}
             source={require('../img/StartPage/hdpi/Prince.png')}
-            /> 
-     </TouchableHighlight>
- 
-     <Text style={startpageStyles.princeText}>
-          PRINCE
-        </Text>
-    </View>
-    <View style={startpageStyles.thirddiv}>
-      <Text style={startpageStyles.orTextStyle}>
-          OR
-        </Text>
-    </View>
-    <View style={startpageStyles.fourthdiv}>
-      <TouchableHighlight
-          onPress={() => {}}
-          activeOpacity={75 / 100}
-          underlayColor={"rgba(221,99,99,1)"}>
+            key={"babOSOCUBOCU"}
+              /> 
+         </TouchableOpacity>
+      
+      <TouchableOpacity
+          onPress={() => {this.navigate('loginPage')}}
+          activeOpacity={60 / 100}
+          >
         <Image
               style={startpageStyles.princessImage}
               resizeMode={"stretch"}
             source={require('../img/StartPage/hdpi/Princess.png')}
+            key={"bcdlsacucoad"}
               /> 
-         </TouchableHighlight>
-      <Text style={startpageStyles.princessText}>
-          PRINCESS
-        </Text>
-   
-
+         </TouchableOpacity>
+      <TouchableOpacity
+          onPress={() => {this.navigate('iciciLogin')}}
+          activeOpacity={60 / 100}
+         >
+        <Image
+              style={startpageStyles.princessImage}
+              resizeMode={"stretch"}
+            source={require('../img/StartPage/hdpi/Parent.png')}
+            key={"fbksafdcbndl"}
+              /> 
+         </TouchableOpacity>
+      
+      
+      <TouchableOpacity
+          onPress={() => {this.navigate('iciciLogin')}}
+          activeOpacity={60 / 100}
+          >
+        <Image
+              style={startpageStyles.princessImage}
+              resizeMode={"stretch"}
+            source={require('../img/StartPage/hdpi/Merchant.png')}
+            key = {"agkvdsa"}
+              /> 
+         </TouchableOpacity>
+      
+      
       
         </View>
+
         </BackgroundImage>
     )
+    
   }
 }
 
 const startpageStyles = StyleSheet.create({
-  mainview: {
-    marginBottom: 20,
-    justifyContent: 'space-around',
-    alignItems: "stretch",
-    flex: 1,
-  },
   topdiv: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex:  2 ,
-  },
-  logo:{
-    	height: 84,
-        width: 252,
-  },
-  iciciLogo: {
-    height: 38,
-    width: 189,
-    marginLeft: 100,
-    marginTop: 10,
-  },
-  seconddiv: {
-    flexDirection: 'row',
-    marginLeft: 30,
-    marginRight: 30,
-    justifyContent: "space-around",
-    alignItems: "flex-end",
-    flex: 2,
-  },
-  thirddiv: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-  },
-  fourthdiv: {
-     flexDirection: 'row',
-    marginLeft: 30,
-    marginRight: 30,
-    justifyContent: "space-around",
-    alignItems: "flex-end",
-    flex: 2,
-  },
-  princeImage: {
-    width:  64 ,
-    marginRight: 0,
-  },
-  princeText: {
-    height: 42,
-    width: 132,
-    color: '#2496C7',
-    
-    fontFamily: "Azo Sans Uber",
-        fontSize: 32,
-        lineHeight: 42,
-        textAlign: 'center',
-        alignSelf: 'center',
-  },
-  princessImage: {
-    width:  64 ,
-    marginRight: 0,
-  },
-  princessText: {
-    	height: 42,
-        width: 174,
-        color: '#C153BF',
-        fontFamily: "Azo Sans Uber",
-        fontSize: 32,
-        lineHeight: 42,
-        textAlign: 'center',
-        alignSelf: 'center',
+    flex:1, 
+    justifyContent: 'space-around', 
+    alignItems: 'center', 
 
   },
-  orTextStyle: {
-    fontSize: 30
+  logo:{
+     width: 252, 
+    height: 84,
+  },
+  iciciLogo: {
+     alignSelf: 'flex-end',
+    paddingRight:30, 
+    width: 189, 
+    height: 38, 
+  },
+  seconddiv: {
+   flex:4,
+    justifyContent:'space-around',
+    alignItems:'center', 
+    marginTop: 20,
+  },
+  princessImage: {
+    width:  279,
+    height: 78,
   },
 
 

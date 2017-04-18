@@ -3,12 +3,13 @@ import {
   View,
   StyleSheet,
   Text,
-  View,
   TextInput,
   TouchableHighlight,
   TouchableOpacity,
   Image,
 } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
 
 class HomePageComponent extends Component {
 
@@ -19,15 +20,25 @@ class HomePageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+     
+    this.navigate = this.navigate.bind(this)
   }
 
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
+  }
   render() {
     return (
-      <View>
         <BackgroundImage>
           <View style= {HomePagestyles.HeaderView} >
-            <View style={HomePagestyles.Logo} />
-            <View style={HomePagestyles.iciciLogo} />
+            <Image
+              style={HomePagestyles.Logo}
+              resizeMode={"contain"}
+              source={require('../img/HomePage/hdpi/Logo.png')}
+              key={"bcdlkscbvd"}
+            />  
 
           </View>
           <View style= {HomePagestyles.HomePageBackGround} >
@@ -39,18 +50,57 @@ class HomePageComponent extends Component {
                 >
                 <View style= {{flex:1}}>
                   <View style= {HomePagestyles.toprowcirlces}>
-                    <View style={HomePagestyles.circle} />
-                    <View style={HomePagestyles.circle} />
+                    <TouchableOpacity
+                        onPress={() => {this.navigate('myAccount')}}
+                        activeOpacity={60 / 100}
+                    >
+                    <Image
+                        style={HomePagestyles.circle}
+                        resizeMode={"stretch"}
+                        source={require("../img/HomePage/hdpi/MyAccountCircle.png")}
+                        key = {"12354354456"}
+                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => {this.navigate('payments')}}
+                        activeOpacity={60 / 100}
+                    >
+                      <Image
+                        style={HomePagestyles.circle}
+                        resizeMode={"stretch"}
+                        source={require("../img/HomePage/hdpi/PaymentsCirlce.png")}
+                        key = {"1235435345gvdsf456"}
+                        />
+                    </TouchableOpacity>
                   </View>
                   <View style= {HomePagestyles.bottomrowcircles}>
-                    <View style={HomePagestyles.circle} />
-                    <View style={HomePagestyles.circle} />
+                    <TouchableOpacity
+                        onPress={() => {this.navigate('history')}}
+                        activeOpacity={60 / 100}
+                      >
+                    <Image
+                        style={HomePagestyles.circle}
+                        resizeMode={"stretch"}
+                        source={require("../img/HomePage/hdpi/HistoryCircle.png")}
+                        key = {"123rfsg456"}
+                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => {this.navigate('badges')}}
+                        activeOpacity={60 / 100}
+                    >
+                    <Image
+                        style={HomePagestyles.circle}
+                        resizeMode={"stretch"}
+                        source={require("../img/HomePage/hdpi/BadgesCircle.png")}
+                        key = {"123gsdh456"}
+                        />
+                    </TouchableOpacity>
                   </View>
                 </View>
               </Image>
           </View>
         </BackgroundImage>
-      </View>
     )
   }
 }
@@ -62,14 +112,15 @@ const HomePagestyles = StyleSheet.create({
     alignItems: 'center', 
   },
   Logo: {
-    width: 252, 
-    height: 84,
+    width: 302, 
+    height: 102,
   },
   iciciLogo: {
+    marginTop: 60,
     alignSelf: 'flex-end',
     paddingRight:30, 
-    width: 189, 
-    height: 38, 
+    width: 98, 
+    height: 20, 
   },
   HomePageBackGround: {
     flex:4,
@@ -99,7 +150,7 @@ const HomePagestyles = StyleSheet.create({
     alignItems: 'center', 
     flexDirection:'row',
     marginLeft: 24, 
-    marginRight:34,
+    marginRight:24,
   },
   circle: {
     width: 156, 

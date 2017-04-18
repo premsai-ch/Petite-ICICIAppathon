@@ -1,5 +1,9 @@
 import React, { Component, } from 'react'
-import { View,Image, Text, StyleSheet } from 'react-native'
+import { View,Image, Text, StyleSheet,TouchableOpacity } from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
+
+import Avatar from 'react-native-interactive-avatar'
 
 class BadgesPageComponent extends Component {
 
@@ -10,11 +14,21 @@ class BadgesPageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+     this.navigate = this.navigate.bind(this)
+  }
+
+  handleImageChange = (response) => {
+        console.log(response);
+    };
+  
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
   }
 
   render() {
     return (
-      <View>
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
@@ -24,12 +38,17 @@ class BadgesPageComponent extends Component {
             key={"abcdeefhfg"}
           >
             <View style={BadgesPageStyles.backArrowView}>
+              <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
                 <Image 
                   style={BadgesPageStyles.backArrowImage}
                   resizeMode={"stretch"}
                   source={require("../img/BadgesPage/hdpi/BackArrow.png")}
                   key={"abfdskblfadcdeefg"}
                 />
+              </TouchableOpacity>
             </View>
           </Image>
         </View>
@@ -44,7 +63,7 @@ class BadgesPageComponent extends Component {
               <Image 
                   style={BadgesPageStyles.AddphotoImage}
                   resizeMode={"stretch"}
-                  source={require("../img/BadgesPage/hdpi/AddPhoto.png")}
+                  source={require("../img/BadgesPage/hdpi/GirlPic.png")}
                   key={"abfdskblfdsdadcdeefg"}
                 >
                 <View style={{flex:1, justifyContent:'center'}}>
@@ -56,6 +75,7 @@ class BadgesPageComponent extends Component {
                 />
                 </View>
               </Image>
+              
              
             </View> 
             <View style = {BadgesPageStyles.pointStarsView}>
@@ -74,7 +94,6 @@ class BadgesPageComponent extends Component {
           </Image>
         </View>
       </BackgroundImage>
-      </View>
     )
   }
 }

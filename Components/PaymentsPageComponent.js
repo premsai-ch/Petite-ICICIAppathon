@@ -1,5 +1,8 @@
 import React, { Component, } from 'react'
-import { View, Image, Text, StyleSheet} from 'react-native'
+import { View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native'
+
+import BackgroundImage from './BackgroundImage.js'
+
 
 class PaymentsPageComponent extends Component {
 
@@ -10,11 +13,17 @@ class PaymentsPageComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+     this.navigate = this.navigate.bind(this)
+  }
+
+  navigate(pageName) {
+    this.props.navigator.push({
+      pageName
+    })
   }
 
   render() {
     return (
-      <View>
         <BackgroundImage>
         <View style={{flex: 1}}>
           <Image 
@@ -24,16 +33,25 @@ class PaymentsPageComponent extends Component {
               key={"abcdeefg"}
           >
           <View style={PaymentsPageStyles.backArrowView}>
+            <TouchableOpacity
+                onPress={() => {this.navigate('homePage')}}
+                activeOpacity={60 / 100}
+              >
               <Image 
             style={PaymentsPageStyles.backArrowImage}
             resizeMode={"stretch"}
               source={require("../img/PaymentsPage/hdpi/BackArrow.png")}
               key={"abfdsfadcdeefg"}
               />
+            </TouchableOpacity>
           </View>
           </Image>
         </View>
         <View style={PaymentsPageStyles.balanceTabView}>
+          <TouchableOpacity
+                onPress={() => {this.navigate('scanPage')}}
+                activeOpacity={60 / 100}
+              >
        <Image 
             style={PaymentsPageStyles.balanceTabImage}
             resizeMode={"stretch"}
@@ -42,7 +60,7 @@ class PaymentsPageComponent extends Component {
           >
           <View style = {PaymentsPageStyles.balanceTextView}>
               <Image 
-                  style={HistoryPageStyles.ScanButton}
+                  style={PaymentsPageStyles.ScanButton}
                   resizeMode={"stretch"}
                   source={require("../img/PaymentsPage/hdpi/ScanButton.png")}
                   key={"abcdeesddsadwdfg"}
@@ -50,6 +68,11 @@ class PaymentsPageComponent extends Component {
           </View>
          
           </Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+                onPress={() => {this.navigate('transferFriend')}}
+                activeOpacity={60 / 100}
+              >
           <Image 
             style={PaymentsPageStyles.balanceTabImage}
             resizeMode={"stretch"}
@@ -65,10 +88,10 @@ class PaymentsPageComponent extends Component {
                 />
           </View>
           </Image>
+          </TouchableOpacity>
         </View>
         
       </BackgroundImage>
-      </View>
     )
   }
 }

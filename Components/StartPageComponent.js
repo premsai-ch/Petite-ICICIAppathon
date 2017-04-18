@@ -72,7 +72,7 @@ class StartPageComponent extends Component {
               /> 
          </TouchableOpacity>
       <TouchableOpacity
-          onPress={() => {this.navigate('iciciLogin')}}
+          onPress={() => {this.navigate('iciciLoginParent')}}
           activeOpacity={60 / 100}
          >
         <Image
@@ -85,7 +85,7 @@ class StartPageComponent extends Component {
       
       
       <TouchableOpacity
-          onPress={() => {this.navigate('iciciLogin')}}
+          onPress={() => {this.navigate('iciciLoginMerchant')}}
           activeOpacity={60 / 100}
           >
         <Image

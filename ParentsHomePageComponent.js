@@ -1,9 +1,19 @@
 import React, { Component, } from 'react'
-import { View, Image, TextInput, Alert, Text, StyleSheet,TouchableOpacity, Keyboard } from 'react-native'
+import {
+  View,
+  StyleSheet,
+  Image,
+  Text,
+  TouchableHighlight,
+  TouchableOpacity,
+  TextInput,
+  Alert
+} from 'react-native'
 
-import BackgroundImage from './BackgroundImage.js'
+import BackgroundImage from './Components/BackgroundImage.js'
 
-class MyAccountPageComponent extends Component {
+
+class ParentsHomePageComponent extends Component {
 
   static propTypes = {}
 
@@ -11,17 +21,9 @@ class MyAccountPageComponent extends Component {
 
   constructor(props) {
     super(props)
-    this.state = {text: 'Enter the Amount', amount: '0'}
-    this.navigate = this.navigate.bind(this)
+    this.state = {amount:'0'}
   }
 
-  navigate(pageName) {
-    this.props.navigator.push({
-      pageName
-    })
-  }
-  
-  
   render() {
     return (
       <BackgroundImage>
@@ -29,41 +31,29 @@ class MyAccountPageComponent extends Component {
           <Image 
             style={MyAccountPageStyles.topbarImage}
             resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/TopbarAccount.png")}
+              source={require("./img/AccountsPage/hdpi/TopbarAccount.png")}
               key={"abcdeefg"}
           >
-          <View style={MyAccountPageStyles.backArrowView}>
-            <TouchableOpacity
-                onPress={() => {this.navigate('homePage')}}
-                activeOpacity={60 / 100}
-              >
-              <Image 
-            style={MyAccountPageStyles.backArrowImage}
-            resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/BackArrow.png")}
-              key={"abfdsfadcdeefg"}
-              />
-            </TouchableOpacity>
-          </View>
+          
           </Image>
         </View>
         <View style={MyAccountPageStyles.balanceTabView}>
           <Image 
             style={MyAccountPageStyles.balanceTabImage}
             resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/BalanceTab.png")}
+              source={require("./img/AccountsPage/hdpi/BalanceTab.png")}
               key={"abcdeesdwdfg"}
           >
           <View style = {MyAccountPageStyles.balanceTextView}>
               <Text style = {MyAccountPageStyles.balanceText}>
-                1750
+                100000
               </Text>
           </View>
           </Image>
           <Image 
             style={MyAccountPageStyles.AskforMoneyTabImage}
             resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/AskMoneyTab.png")}
+              source={require("./img/AccountsPage/hdpi/setAllowanceTab.png")}
               key={"abcdeesdwfdsfdfg"}
             >
           <View style= {MyAccountPageStyles.AskforMoneyTabView}>
@@ -71,7 +61,7 @@ class MyAccountPageComponent extends Component {
             <Image 
             style={MyAccountPageStyles.moneyInput}
             resizeMode={"stretch"}
-              source={require("../img/AccountsPage/hdpi/MoneyInput.png")}
+              source={require("./img/AccountsPage/hdpi/MoneyInput.png")}
               key={"abcdeesdwfdsfdfg"}
               >
               <View style= {MyAccountPageStyles.MoneyInputTextFieldView}>
@@ -89,7 +79,7 @@ class MyAccountPageComponent extends Component {
             <TouchableOpacity
                 onPress={() => Alert.alert(
                                 'Confirmation',
-                                'I want to ask my parents for '+this.state.amount+' Rupees',
+                                'Set your child monthly allowance to '+this.state.amount+' Rupees ?',
                                 [
                                   {text: 'NO', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
                                   {text: 'YES', onPress: () => console.log('OK Pressed')},
@@ -101,21 +91,27 @@ class MyAccountPageComponent extends Component {
                 <Image 
                   style={MyAccountPageStyles.Askbutton}
                   resizeMode={"stretch"}
-                  source={require("../img/AccountsPage/hdpi/askButton.png")}
+                  source={require("./img/AccountsPage/hdpi/askButton.png")}
                   key={"abcdeesdwdfsaffdsfdfg"}
                   />
             </TouchableOpacity>
-
+            
           </View>
           </Image>
-
+          <Image 
+            style={MyAccountPageStyles.balanceTabImage}
+            resizeMode={"stretch"}
+              source={require("./img/AccountsPage/hdpi/RequestsTab.png")}
+              key={"abcdeefdssdwdfg"}
+          >
+          </Image>
+          
+          
         </View>
-        </BackgroundImage> 
+      </BackgroundImage> 
     )
   }
 }
-
-
 const MyAccountPageStyles = StyleSheet.create({
   balanceTextView: {
     flex: 1, 
@@ -123,12 +119,10 @@ const MyAccountPageStyles = StyleSheet.create({
     alignItems:"flex-end"
   },
   balanceText : {
-    marginRight: 30,
-    height: 52,
-    width: 112,
+    marginRight: 20,
     color: '#FFFFFF',
     fontFamily: "Azo Sans Uber",
-    fontSize: 40,
+    fontSize: 36,
     lineHeight: 52,
     textAlign: 'center',
   },
@@ -197,4 +191,4 @@ const MyAccountPageStyles = StyleSheet.create({
   },  
 })
 
-export default MyAccountPageComponent
+export default ParentsHomePageComponent

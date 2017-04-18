@@ -55,7 +55,7 @@ class HistoryPageComponent extends Component {
           >
           <View style = {HistoryPageStyles.balanceTextView}>
               <Text style = {HistoryPageStyles.balanceText}>
-                2000
+                1500
               </Text>
           </View>
          
@@ -68,7 +68,7 @@ class HistoryPageComponent extends Component {
           >
           <View style = {HistoryPageStyles.balanceTextView}>
               <Text style = {HistoryPageStyles.allowanceText}>
-                2000
+                1000
               </Text>
           </View>
           </Image>

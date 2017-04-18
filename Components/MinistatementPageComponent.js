@@ -63,7 +63,7 @@ class MinistatementPageComponent extends Component {
                       source={require("../img/MiniStatementPage/hdpi/TransferHandIcon.png")}
                       key={"abfdskblfadcdffdfseefg"}
                     />
-                  <Text style={MinistatementPageStyles.dataTextStyle}>21/12/16</Text>
+                  <Text style={MinistatementPageStyles.dataTextStyle}>18/04/17</Text>
                   <Text style={MinistatementPageStyles.transferamountTextStyle}>200</Text>
                   
                 </View>
@@ -76,6 +76,24 @@ class MinistatementPageComponent extends Component {
                 />
                
                 
+                
+               <View style={MinistatementPageStyles.eachRowView}>
+                <Image 
+                      style={MinistatementPageStyles.icons}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/3CurrencyNotesIcon.png")}
+                      key={"abfdskblfadcdffdfseefg"}
+                    />
+                  <Text style={MinistatementPageStyles.dataTextStyle}>18/04/17</Text>
+                  <Text style={MinistatementPageStyles.minusamountTextStyle}>300</Text>
+                  
+                </View>
+                  <Image 
+                      style={MinistatementPageStyles.horizontalLine}
+                      resizeMode={"stretch"}
+                      source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
+                      key={"abfdskblfadcdffdsfdfseefg"}
+                />     
                 <View style={MinistatementPageStyles.eachRowView}>
                 <Image 
                       style={MinistatementPageStyles.icons}
@@ -83,7 +101,7 @@ class MinistatementPageComponent extends Component {
                       source={require("../img/MiniStatementPage/hdpi/PiggyBankIcon.png")}
                       key={"abfdskblfadcdffdfseefg"}
                     />
-                  <Text style={MinistatementPageStyles.dataTextStyle}>10/11/16</Text>
+                  <Text style={MinistatementPageStyles.dataTextStyle}>18/04/17</Text>
                   <Text style={MinistatementPageStyles.amountTextStyle}>250</Text>
                   
                 </View>
@@ -95,23 +113,7 @@ class MinistatementPageComponent extends Component {
                       source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
                       key={"abfdskblfaddsdcdffdfseefg"}
                 />
-               <View style={MinistatementPageStyles.eachRowView}>
-                <Image 
-                      style={MinistatementPageStyles.icons}
-                      resizeMode={"stretch"}
-                      source={require("../img/MiniStatementPage/hdpi/3CurrencyNotesIcon.png")}
-                      key={"abfdskblfadcdffdfseefg"}
-                    />
-                  <Text style={MinistatementPageStyles.dataTextStyle}>09/10/16</Text>
-                  <Text style={MinistatementPageStyles.minusamountTextStyle}>300</Text>
-                  
-                </View>
-                  <Image 
-                      style={MinistatementPageStyles.horizontalLine}
-                      resizeMode={"stretch"}
-                      source={require("../img/MiniStatementPage/hdpi/HorizontalLine.png")}
-                      key={"abfdskblfadcdffdsfdfseefg"}
-                />                
+                
                 <View style={MinistatementPageStyles.eachRowView}>
                 <Image 
                       style={MinistatementPageStyles.icons}
@@ -119,8 +121,8 @@ class MinistatementPageComponent extends Component {
                       source={require("../img/MiniStatementPage/hdpi/PiggyBankIcon.png")}
                       key={"abfdskblfffsadcdffdfseefg"}
                     />
-                  <Text style={MinistatementPageStyles.dataTextStyle}>06/08/16</Text>
-                  <Text style={MinistatementPageStyles.amountTextStyle}>600</Text>
+                  <Text style={MinistatementPageStyles.dataTextStyle}>16/04/17</Text>
+                  <Text style={MinistatementPageStyles.amountTextStyle}>1750</Text>
                   
                 </View>
 

@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import BackgroundImage from './Components/BackgroundImage.js'
 
-class  LoginPageComponent extends Component {
+class  IciciLoginPageComponentParent extends Component {
 
   static propTypes = {}
 
@@ -48,17 +48,17 @@ class  LoginPageComponent extends Component {
             key={"bckdacdis"}
             /> 
     </View>
-    <View style={{flex:2}}>
+    <View style={{flex:1}}>
     </View>
     <View style={{flex: 1,
                 justifyContent: "space-around",
                 alignItems: 'center',
           }}>
-          
+        
         <Image 
             style={LoginpageStyles.textInputImageStyle}
             resizeMode={"stretch"}
-            source={require("./img/LoginPage/hdpi/TextInput.png")}
+            source={require("./img/LoginPage/hdpi/Name.png")}
             key={"abcdeefhfg"}
           >
           <View style= {LoginpageStyles.MoneyInputTextFieldView}>
@@ -68,10 +68,31 @@ class  LoginPageComponent extends Component {
                   ref="secret"
                   returnKeyType={'done'}
                   keyboardType="default"
-                  secureTextEntry={true}
+                  secureTextEntry={false}
                   onSubmitEditing={
                     (event)=> {this.setState({password:event.nativeEvent.text}); this.refs.secret.blur()} }
-                  >My Secret Code is </TextInput> 
+                  > Bank Customer ID </TextInput> 
+              </View>
+      </Image>
+      
+    
+        <Image 
+            style={LoginpageStyles.textInputImageStylePassword}
+            resizeMode={"stretch"}
+            source={require("./img/LoginPage/hdpi/TextInput.png")}
+            key={"abcddsdeefhfg"}
+          >
+          <View style= {LoginpageStyles.MoneyInputTextFieldView}>
+                <TextInput style={LoginpageStyles.InputTextStyle}
+                  underlineColorAndroid = {'transparent'}
+                  selectTextOnFocus={true}
+                  ref="secret"
+                  returnKeyType={'done'}
+                  keyboardType="default"
+                  secureTextEntry={false}
+                  onSubmitEditing={
+                    (event)=> {this.setState({password:event.nativeEvent.text}); this.refs.secret.blur()} }
+                  >Password</TextInput> 
               </View>
       </Image>
         </View>
@@ -81,22 +102,17 @@ class  LoginPageComponent extends Component {
                       alignItems: 'center',
                      }}>
           <TouchableOpacity
-                onPress={() => {this.navigate('homePage')}}
+                onPress={() => {this.navigate('parentshomePage')}}
                 activeOpacity={60 / 100}
               >
           <Image 
             style={LoginpageStyles.loginButtonStyle}
             resizeMode={"stretch"}
             source={require("./img/LoginPage/hdpi/LoginButton.png")}
-            key={"abcdeefsdfhfg"}
+            key={"abcderwereefsdfhfg"}
           />
           </TouchableOpacity>
-          <TouchableOpacity
-                onPress={() => {this.navigate('registrationPage')}}
-                activeOpacity={60 / 100}
-              >
-          <Text style= {LoginpageStyles.registerText}>I Want to Register </Text>
-          </TouchableOpacity>
+          <Text ></Text>
         </View>
       </BackgroundImage>
 
@@ -125,6 +141,11 @@ const LoginpageStyles = StyleSheet.create({
     width:360,
     height: 80
   },
+  textInputImageStylePassword: {
+    width:360,
+    height: 80,
+    marginTop : 30,
+  },
   InputTextStyle: {
     color: '#FFFFFF',
     fontFamily: "Azo Sans Uber",
@@ -152,4 +173,4 @@ const LoginpageStyles = StyleSheet.create({
 },
 })
 
-export default LoginPageComponent
+export default IciciLoginPageComponentParent

@@ -54,7 +54,7 @@ class ScanPageComponent extends Component {
             <Image 
                   style={{width:400, height: 100}}
                   resizeMode={"stretch"}
-                  source={require("../img/RegistrationPage/hdpi/TextInput.png")}
+                  source={require("../img/TransferToFriendPage/hdpi/textInputbox.png")}
                   key={"abfdskblfadcdeefg"}
               >
               <TextInput style={ScanPageStyles.MoneyInputText}

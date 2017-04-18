@@ -31,7 +31,11 @@ import ScanPageComponent from './Components/ScanPageComponent.js'
 import TransferPageComponent from './Components/TransferPageComponent.js'
 import MinistatementPageComponent from './Components/MinistatementPageComponent.js'
 import LoginPageComponent from './LoginPageComponent.js'
-import IciciLoginPageComponent from './ICICILoginPageComponent.js'
+import IciciLoginPageComponentParent from './ICICILoginPageComponentParent.js'
+import IciciLoginPageComponentMerchant from './ICICILoginPageComponentMerchant.js'
+import RegistrationPageComponent from './RegistrationPageComponent.js'
+import ParentsHomePageComponent from './ParentsHomePageComponent.js'
+import MerchantsHomePageComponent from './MerchantsHomePageComponent.js'
 
 class Project extends Component {
   constructor() {
@@ -60,8 +64,16 @@ class Project extends Component {
       return <MinistatementPageComponent navigator={navigator} />
     } else if (route.pageName === 'loginPage') {
       return <LoginPageComponent navigator={navigator}/>
-    } else if (route.pageName === 'iciciLogin') {
-      return <IciciLoginPageComponent navigator={navigator} />
+    } else if (route.pageName === 'iciciLoginParent') {
+      return <IciciLoginPageComponentParent navigator={navigator} />
+    } else if (route.pageName === 'registrationPage') {
+      return <RegistrationPageComponent navigator={navigator} />
+    } else if (route.pageName === 'iciciLoginMerchant') {
+      return <IciciLoginPageComponentMerchant navigator={navigator} />
+    } else if (route.pageName === 'parentshomePage') {
+      return <ParentsHomePageComponent navigator={navigator} />
+    } else if (route.pageName === 'merchantshomePage') {
+      return <MerchantsHomePageComponent navigator={navigator} />
     }
   }
   render() {

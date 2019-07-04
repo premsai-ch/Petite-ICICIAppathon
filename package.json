@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start"
+    "start": "react-native start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "native-base": "^2.1.2",
     "react": "^15.1.0",
     "react-native": "^0.27.2",
     "react-native-image-picker": "^0.26.3",
-    "react-native-interactive-avatar": "^1.1.0"
-  }
+    "react-native-interactive-avatar": "^1.1.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
